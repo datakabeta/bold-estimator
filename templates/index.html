@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Budget Estimator (BET)</title>
+    
+    <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+
+<body>
+    <h1>BET</h1>
+
+    <form align="center" action="{{ url_for('show_prediction')}}" method="get">
+        <input type="text" style="text-align:center" name="sc_ct" placeholder="# Support Centers" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="ai_conv_widget_ct" placeholder="# AI Conversational Widgets" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="agent_widget_ct" placeholder="# Agent Chat Windows" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="complex_providers_ct" placeholder="# Complex Providers" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="is_middleware_dev" placeholder="Middleware Development?" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="is_sso" placeholder="SSO?" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="kb_ct" placeholder="# KBs" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="team_ct" placeholder="# PS Team Members" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="import_none_and_content_available" placeholder="# Content Available for Import?" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="frontend_branding_none_or_simple" placeholder="Frontend Branding Standard?" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="delays_prod_bugs_significant_mtgs_cr_partner_beaur" placeholder="Delays/Partner/Bureacracy/Many Meetings/Possible Bugs?" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="providers_entities" placeholder="# Entities or Simple Provider Use Cases" required="required" />
+        <br>
+        
+        <button align="center" type="submit" class="btn btn-primary btn-block btn-large">GET ESTIMATE</button>
+    </form>
+
+    <h1> {{ prediction_text }} </h1>
+
+
+</body>
+
+</html>

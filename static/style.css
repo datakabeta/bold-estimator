@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0;
+        color: #fff;
+        background-image: linear-gradient(260deg, #2376ae 0%, #77cabf 100%);
+        background-size: contain;
+    }
+    
+    h1 {
+        height: 100px;
+        color: white;
+        font-weight: 400;
+        padding: 4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* text-shadow: 2px 2px 5px black; */
+    }
+    h3{
+        color: #fff;
+        /* opacity: 0.6; */
+        margin-top: -10px;
+        font-weight: 100;
+    }
+
+    footer{
+        position: static;
+        bottom: 0;
+        width: 100%;
+        height: 60px;   
+    }
+    
+    .introduction{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .exportMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .importMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 3%;
+    }
+    
+    form {
+        align-items: center;
+    }
+    
+    .server {
+        min-width: 200px;
+        height: 32px;;
+        padding: 6px 15px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 0.5px solid black;
+        border-radius: 10px;
+    }
+    
+    .phrasings {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 0.5px solid black;
+        border-radius: 10px;
+    }
+    
+    .fileNameRow {
+        margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+        border-radius: 5px;
+        background-color: #fbc4a9;
+        border: 0.5px black solid;
+        /* cursor: pointer; */
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        cursor: pointer;
+        outline: none;
+        /* margin-top: 13%; */
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        border: 0.5px #1b5377 solid;
+        color: #1b5377;
+        outline: none;
+    }
+    
+    input[type="submit"]:hover,
+    input[type="submit"]:focus {
+        color: #fff;
+        border: 0.5px whitesmoke solid;
+        outline: none;
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #1b5377;
+        color: #fff;
+        /* border: 0.5px whitesmoke solid; */
+        /* cursor: pointer; */
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        cursor: pointer;
+        outline: none;
+    }
+    
+    .importBtn, .exportBtn, .instructions-box, .instructions-button{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 0.5px #1b5377 solid;
+        color: #1b5377;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+    }
+    .instructions-button{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 13.33;
+        font-family: arial;
+        font-weight: normal;
+        align-items: center;
+    }
+    
+    .instructions-button:focus, 
+    .instructions-button:active, 
+    .instructions-button:hover, 
+    .importBtn:focus, 
+    .importBtn:active,
+    .importBtn:hover, 
+    .exportBtn:focus,
+    .exportBtn:active,
+    .exportBtn:hover{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #1b5377;
+        color: #fff;
+        cursor: pointer;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        outline: none;
+        text-decoration: none;
+    }
+
+    .exportBtnActive{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #1b5377;
+        color: #fff;
+        cursor: pointer;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        outline: none;
+    }
+    .importBtnActive{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #1b5377;
+        color: #fff;
+        cursor: pointer;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        outline: none;
+    }
+
+    .exampletBtn{
+        width: 65px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 0.5px #1b5377 solid;
+        color: #1b5377;
+        cursor: pointer;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        outline: none;
+        margin-top: 12px;
+        margin-left: 44%;
+    }
+    .exampletBtn:focus,
+    .exampletBtn:active,
+    .exampletBtn:hover{
+        width: 65px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #1b5377;
+        color: #fff;
+        cursor: pointer;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        outline: none;
+    }
+
+    
+    .logo {
+        bottom: 0;
+        height: 40px;
+        background-image: url("https://nr-customers.s3.amazonaws.com/customers/nanoRep/support-center/images/bold360ai.svg");
+        background-repeat: no-repeat;
+        margin: 0 15px;
+    }
+    
+    label {
+        display: flex;
+        padding: 10px;
+        flex: 0 0 200px;
+        text-align: center;
+    }
+    .buttons{
+        margin-top: 15px;
+        padding-bottom: 5px;
+    }
+    
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 0%;
+    }
+    
+    .btnExport {
+        display: flex;
+        justify-content: center;
+    }
+
+    .opening{
+        font-weight: 100;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        max-width: 550px;
+    }
+    
+    .row {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        font-weight: 100;
+    }
+    
+    .actionNameRow{
+        /* display: none; */
+    }
+    
+    input[type="text"] {
+        /* width: 100%; */
+        padding: 12px 20px;
+        height: 32px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 0.5px solid black;
+        border-radius: 10px;
+        max-width: 200px;
+	    min-width: 200px;
+    }
+    input[type="password"] {
+        /* width: 100%; */
+        padding: 12px 20px;
+        height: 32px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 0.5px solid black;
+        border-radius: 10px;
+        max-width: 200px;
+        min-width: 200px;
+    }
+    
+    input[type="radio"] {
+        padding: 12px 20px;
+        margin: 8px 5px;
+    }
+    
+    input[type="file"] {
+        height: 40px;
+        opacity: 0;
+        position: relative;
+        cursor: pointer;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+        margin-top: -32px;
+        bottom: -25px;
+    }
+    
+    .uploadFile {
+        position: relative;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 0.5px solid black;
+        border-radius: 10px;
+        text-align: center;
+        /* padding: 5px 10px; */
+        height: 32px;
+        max-width: 200px;
+        background-color: #ffc966;
+    }
+    
+    .radioBtn {
+        min-width: 140px;
+    }
+    
+    .rebuildURLsRow{
+        display: none;
+    }
+    
+    /**** START MODAL ****/
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .modal-content,
+    .modal-content-ex,
+    .modal-content-ex-suc {
+        background-color: #f4f4f4;
+        margin: 20% auto;
+        width: 40%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        animation-name: modelopen;
+        animation-duration: 1s;
+        color: #1b5377;
+        text-align: center;
+    }
+    
+    .modal-failed-header,
+    .modal-failed-header-ex {
+        background-color: #f66;
+        padding: 15px;
+        color: white;
+        text-align: center;
+    }
+    .modalTitle,
+    .modalTitle-ex{
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+    .modal-success-header {
+        background-color: #4bee89;
+        padding: 15px;
+        color: white;
+        text-align: center;
+    }
+    
+    .modal-failed-header h2,
+    .modal-success-header h2 {
+        margin: 0;
+    }
+    
+    #modal-body, 
+    #modal-body-ex, 
+    #modal-body-ex-suc {
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 20px;
+        letter-spacing: 0.5px;
+    }
+    
+    .closeBtn,
+    .closeBtn-ex,
+    .closeBtn-ex-suc {
+        color: #ccc;
+        float: right;
+        font-size: 30px;
+        margin-top: -7px;
+        /* color: #fff; */
+    }
+    
+    .closeBtn:hover,
+    .closeBtn:focus,
+    .closeBtn-ex:hover,
+    .closeBtn-ex:focus,
+    .closeBtn-ex-suc:hover,
+    .closeBtn-ex-suc:focus {
+        color: rgba(87, 85, 85, 0.856);
+        text-decoration: none;
+        cursor: pointer;
+        /* cursor: url('http://csscursor.info/source/santahand.png'), default !important; */
+    }
+    
+    @keyframes modelopen {
+        from {
+            opacity: 0
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    /**** END MODAL ****/
+    
+    .importMain{
+        display: none;
+        animation-name: modelopen;
+        animation-duration: 1s;
+    }
+    .exportMain{
+        display: none;
+        animation-name: modelopen;
+        animation-duration: 1s;
+    }
+    
+    @media screen and (max-width: 800px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+        }
+        .logo {
+            background-position-x: center;
+        }
+    }
+
+    /* Instructions button*/
+      .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .overlay:target {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        overflow: scroll;
+      }
+      
+      .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 80%;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
+      
+      .popup h2 {
+        margin-top: 0;
+        font-family: Tahoma, Arial, sans-serif;
+        font-size: 32px;
+        text-align: center;
+        color: #1b5377;
+      }
+      .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+      }
+      .popup .close:hover {
+        color: #1b5377;
+      }
+      .popup .content {
+        max-height: 100%;
+        overflow: auto;
+        color: #333;
+        line-height: 2;
+      }
+
+      
+      @media screen and (max-width: 700px){
+        .box{
+          width: 70%;
+        }
+        .popup{
+          width: 70%;
+        }
+      }
